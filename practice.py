@@ -2727,3 +2727,6 @@ print("너 혹시 몇 살이니? " + str(4))
 # print(data)
 # print(data.replace(" ", ""))
 
+print("안녕하세요")
+
+jhjhhhh
