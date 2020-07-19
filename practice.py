@@ -2727,6 +2727,261 @@ print("너 혹시 몇 살이니? " + str(4))
 # print(data)
 # print(data.replace(" ", ""))
 
-print("안녕하세요")
 
-jhjhhhh
+# print("안녕하세요")
+
+# ticker = "btc_krw"
+# ticker = ticker.upper()
+# print(ticker)
+
+# ticker = "BTC_KRW"
+# ticker = ticker.lower()
+# print(ticker)
+
+# name = "hello"
+# name = name.capitalize()
+# print(name)
+
+# file_name = "보고서.xlsx"
+# a = file_name.endswith("xlsx")
+# print(file_name);print(a)
+
+# file_name = "보고서.xlsx"
+# a = file_name.endswith(("xlsx", "xls"))
+# print(file_name)
+# print(a)
+
+# file_name = "2020_보고서.xlsx"
+# a = file_name.startswith("2020")
+# print(file_name)
+# print(a)
+
+# a = "hello world"
+# b = a.split()
+# print(a)
+# print(b)
+
+# ticker = "btc_krw"
+# a = ticker.split("_")
+# print(a)
+
+# date = "2020-05-01"
+# print("연도 :", date.split("-")[0])
+# print("월 :", date.split("-")[1])
+# print("일 :", date.split("-")[2])
+
+# data = "039490    "
+# print(data)
+# data = data.split()
+# print(data)
+
+# import math
+
+# def abs_sign(a):
+#     if a >= 0:
+#         return a
+#     else:
+#         return -a
+    
+# def square(a):
+#     b = a * a
+#     return math.sqrt(b)
+
+# print(abs_sign(5))
+# print(abs_sign(-3))
+# print()
+# print(square(5))
+# print(square(-3))
+
+# def sum_n(n):
+#     s = 0
+#     for i in range(1, n+1):
+#         s = s + i
+#     return s
+
+# print(sum_n(10))
+# print(sum_n(100))
+
+# def sum_n(n):
+#     return n * ( n + 1 ) // 2
+
+# print(sum_n(10))
+# print(sum_n(100))
+
+# def sum_n(n):
+#     s = 0
+#     for i in range (1, n+1):
+#         s = s + ( i * i )
+#     return s
+
+# print(sum_n(10))
+
+# def sum_n(n):
+#     return (n * (n+1) * (2 * n + 1)) // 6
+
+# print(sum_n(10))
+
+# def find_max(a):
+#     n = len(a)
+#     max_v = a[0]
+#     for i in range (1, n):
+#         if a[i] > max_v:
+#             max_v = a[i]
+#         return max_v
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max(v))
+
+# def find_max_idx(a):
+#     n = len(a)
+#     max_idx = 0
+#     for i in range(1, n):
+#         if a[i] > a[max_idx]:
+#             max_idx = i
+#         return max_idx
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max_idx(v))
+
+# def find_same_name(a):
+#     n = len(a)
+#     result = set()
+#     for i in range(0, n - 2):
+#         for j in range(i + 1, n):
+#             if a[i] == a[j]:
+#                 result.add(a[i])
+#     return result
+
+# name1 = ["Tom", "Jerry", "Mike", "Tom"]
+# print(find_same_name(name1))
+
+# name2 = ["Tom", "Jerry", "Mike", "Tom", "Mike"]
+# print(find_same_name(name2))
+
+# def factorial(n):
+#     f = 1
+#     for i in range(1, n + 1):
+#         f = f * i
+#     return f
+
+# print(factorial(1))
+# print(factorial(5))
+# print(factorial(10))
+
+# def fact(n):
+#     if n <= 1:
+#         return 1
+#     return n * fact(n - 1)
+
+# print(fact(1))
+# print(fact(5))
+# print(fact(10))
+
+# def gcd(a, b):
+#     i = min(a, b)
+#     if a % i == 0 and b % i == 0:
+#         return i
+#     i = i - 1
+# print(gcd(1, 5))
+# print(gcd(3, 6))
+
+# def gcd(a, b):
+#     if b == 0:
+#         return a
+#     return gcd(b, a % b)
+
+# print(gcd(1, 5))
+# print(gcd(60, 24))
+
+# def hanoi(n, from_pos, to_pos, aux_pos):
+#     if n == 1:
+#         print(from_pos, "->", to_pos)
+#         return
+    
+#     hanoi(n-1, from_pos, aux_pos, to_pos)
+#     print(from_pos, "->", to_pos)
+
+#     hanoi(n-1, aux_pos, to_pos, from_pos)
+
+# print("n = 1")
+# hanoi(1, 1, 3, 2)
+# print("n = 2")
+# hanoi(2, 1, 3, 2)
+# print("n = 3")
+# hanoi(3, 1, 3, 2)
+
+# def search_list(a, x):
+#     n = len(a)
+#     for i in range (0, n):
+#         if x == a[i]:
+#             return i
+#     return -1
+
+# v = [17, 92, 18, 33, 58, 7, 44, 42]
+# print(search_list(v, 18))
+# print(search_list(v, 33))
+# print(search_list(v, 900))
+
+# def find_min_idx(a):
+#     n = len(a)
+#     min_idx = 0
+#     for i in range (1, n):
+#         if a[i] < a[min_idx]:
+#             min_idx = i
+#     return min_idx
+
+# def sel_sort(a):
+#     result = []
+#     while a:
+#         min_idx = find_min_idx(a)
+#         value = a.pop(min_idx)
+#         result.append(value)
+#     return result
+# d = [2, 4, 5, 1, 3]
+# print(sel_sort(d))
+
+# def sel_sort(a):
+#     n = len(a)
+#     for i in range(0, n-1):
+#         min_idx = i
+#         for j in range(i+1, n):
+#             if a[j] < a[min_idx]:
+#                 min_idx = j
+#         a[i], a[min_idx] = a[min_idx], a[i]
+
+# d = [2, 4, 5, 1, 3]
+# sel_sort(d)
+# print(d)
+
+# def find_ins_idx(r, v):
+#     for i in range(0, len(r)):
+#         if v < r[i]:
+#             return i
+#     return len(r)
+
+# def ins_sort(a):
+#     result = []
+#     while a:
+#         value = a.pop(0)
+#         ins_idx = find_ins_idx(result, value)
+#         result.insert(ins_idx, value)
+#     return result
+
+# d = [2, 4, 5, 1, 3]
+
+# print(ins_sort(d))
+
+# def ins_sort(a):
+#     n = len(a)
+#     for i in range (1, n):
+#         key = a[i]
+#         j = i - 1
+#         while j >= 0 and a[j] > key:
+#             a[j + 1] = a[j]
+#             j -= 1
+#         a[j + 1] = key
+
+# d = [2, 4, 5, 1, 3]
+# ins_sort(d)
+# print(d)
+
