@@ -2985,3 +2985,207 @@ print("너 혹시 몇 살이니? " + str(4))
 # ins_sort(d)
 # print(d)
 
+# import math
+
+# def abs_sign(a):
+#     if a >= 0:
+#         return a
+#     else:
+#         return -a
+
+# def abs_square(a):
+#     b = a * a
+#     return math.sqrt(b)
+
+# print(abs_sign(5))
+# print(abs_sign(-3))
+# print()
+# print(abs_square(5))
+# print(abs_square(-3))
+
+# def sum_n(n):
+#     s = 0
+#     for i in range (1, n+1):
+#         s = s + i
+#     return s
+
+# print(sum_n(10))
+# print(sum_n(100))
+
+# def sum_n(n):
+#     return n * (n+1) // 2
+    
+# print(sum_n(10))
+# print(sum_n(100))
+
+# def find_max(a):
+#     n = len(a)
+#     max_v = a[0]
+#     for i in range(1, n-1):
+#         if max_v <= a[i]:
+#             max_v = a[i]
+#     return max_v
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(find_max(v))
+
+# def find_max_idx(a):
+#     n = len(a)
+#     max_idx = 0
+#     for i in range (1, n):
+#         if a[i] > a[max_idx]:
+#             max_idx = i
+#     return max_idx
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(find_max_idx(v))
+
+# def find_same_name(a):
+#     n = len(a)
+#     result = set()
+#     for i in range (0, n-1):
+#         for j in range (i+1, n):
+#             if a[i] == a[j]:
+#                 result.add(a[i])
+#     return result
+
+# name = ["Tom", "Jerry", "Mike", "Tom"]
+
+# print(find_same_name(name))
+
+# name2 = ["Tom", "Jerry", "Mike", "Tom", "Jerry"]
+
+# print(find_same_name(name2))
+
+# def solve_maze(g, start, end): # 미로정보, 시작점, 끝점
+    
+#     qu = [] # 기억장소 1 : 앞으로 처리해야 할 이동경로를 큐에 지정
+#     done = set() # 기억장소 2 : 이미 큐에 추가한 꼭짓점들을 집합에 기록 (중복 방지)
+
+#     qu.append(start) # 출발점을 큐에 넣고 시작
+#     done.add(start) # 집합에도 추가
+
+#     while qu: # 큐에 처리할 경로가 남아 있으면
+#         p = qu.pop(0) # 큐에서 처리 대상을 꺼냄
+#         v = p[-1] # 큐에 저장된 이동경로의 마지막 문자가 현재 처리해야 할 꼭지점
+#         if v == end: # 처리해야 할 꼭지점이 도착점이라면 (목적지 도착)
+#             return p # 지금까지의 전체 이동 경로를 돌려주고 종료
+#         for x in g[v]: # 대상 꼭짓점에 연결된 꼭짓점들 중에
+#             if x not in done: # 아직 큐에 추가된 적이 없는 꼭짓점을
+#                 qu.append(p + x) # 이동 경로에 새 꼭짓점으로 추가하여 큐에 저장하고
+#                 done. add(x) # 집합에도 추가
+    
+#     return "?" # 탐색이 마칠때까지 도착점이 나오지 않는다면 나갈 수 없는 미로임
+
+# maze = {
+#     'a' : ['e'],
+#     'b' : ['c', 'f'],
+#     'c' : ['b', 'd'],
+#     'd' : ['c'],
+#     'e' : ['a', 'i'],
+#     'f' : ['b', 'g', 'j'],
+#     'g' : ['f', 'h'],
+#     'h' : ['g', 'l'],
+#     'i' : ['e', 'm'],
+#     'j' : ['f', 'k', 'n'],
+#     'k' : ['i', 'o'],
+#     'l' : ['h', 'p'],
+#     'm' : ['i', 'n'],
+#     'n' : ['j', 'm'],
+#     'o' : ['k'],
+#     'p' : ['l']
+#     }
+
+# print(solve_maze(maze, 'a', 'p'))
+
+# def weigh(a, b, c, d):
+#     fake = 29
+#     if a <= fake and fake <= b:
+#         return -1
+#     if c <= fake and fake <= d:
+#         return 1
+#     return 0
+
+# def find_fakecoin(left, right):
+#     for i in range (left+1, right+1):
+#         result = weigh(left, left, i, i)
+#         if result == -1:
+#             return left
+#         elif result == 1:
+#             return i
+#     return -1
+
+# n = 100
+
+# print(find_fakecoin(0, n-1))
+
+# def weigh(a, b, c, d):
+#     fake = 29
+#     if a <= fake and fake <= b:
+#         return -1
+#     if c <= fake and fake <= d:
+#         return 1
+#     return 0
+
+# def find_fakecoin(left, right):
+    
+#     if left == right:
+#         return left
+    
+#     half = (right - left + 1) // 2
+#     g1_left = left
+#     g1_right = left + half - 1
+#     g2_left = left + half
+#     g2_right = g2_left + half - 1
+
+#     result = weigh(g1_left, g1_right, g2_left, g2_right)
+
+#     if result == -1:
+#         return find_fakecoin(g1_left, g1_right)
+#     elif result == 1:
+#         return find_fakecoin(g2_left, g2_right)
+#     else:
+#         return right
+
+# n = 100
+
+# print(find_fakecoin(0, n-1))
+
+# def max_profit(prices):
+    
+#     n = len(prices)
+#     max_profit = 0
+
+#     for i in range (0, n-1):
+#         for j in range (i+1, n):
+#             profit = prices[j] - prices[i]
+
+#             if profit > max_profit:
+#                 max_profit = profit
+
+#     return max_profit
+
+# stock = [10300, 9600, 9800, 8200, 7800, 8300, 9500, 9800, 10200, 9500]
+
+# print(max_profit(stock))
+
+# def max_profit(prices):
+    
+#     n = len(prices)
+#     max_profit = 0
+#     min_price = prices[0]
+#     for i in range(1, n):
+#         profit = prices[i] - min_price
+
+#         if profit > max_profit:
+#             max_profit = profit
+#         if prices[i] < min_price:
+#             min_price = prices[i]
+        
+#     return max_profit
+
+# stock = [10300, 9600, 9800, 8200, 7800, 8300, 9500, 9800, 10200, 9500]
+
+# print(max_profit(stock))
