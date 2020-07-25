@@ -2782,10 +2782,28 @@ print("너 혹시 몇 살이니? " + str(4))
 #         return a
 #     else:
 #         return -a
+
+# def abs_sign(a):
+#     if a >= 0:
+#         return a
+#     else:
+#         return -a
+
+# print(abs_sign(5))
+# print(abs_sign(-3))
     
 # def square(a):
 #     b = a * a
 #     return math.sqrt(b)
+
+# import math
+
+# def square(a):
+#     b = a * a
+#     return math.sqrt(b)
+
+# print(square(5))
+# print(square(-3))
 
 # print(abs_sign(5))
 # print(abs_sign(-3))
@@ -3189,3 +3207,75 @@ print("너 혹시 몇 살이니? " + str(4))
 # stock = [10300, 9600, 9800, 8200, 7800, 8300, 9500, 9800, 10200, 9500]
 
 # print(max_profit(stock))
+
+# def sum(n):
+#     s = 0
+#     for i in range (1, n+1):
+#         s = s + i
+#     return s
+
+# print(sum(10))
+
+# def sum(n):
+#     return n * (n + 1) // 2
+
+# print(sum(10))
+
+# def find_max(a):
+#     n = len(a)
+#     max_v = a[0]
+#     for i in range (1, n):
+#         if a[i] > max_v:
+#             max_v = a[i]
+#     return max_v
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(find_max(v))
+
+# def find_max_idx(a):
+    
+#     n = len(a)
+#     max_idx = 0
+
+#     for i in range (1, n):
+#         if a[i] > a[max_idx]:
+#             max_idx = i
+#     return max_idx
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(find_max_idx(v))
+
+# def find_same_name(a):
+    
+#     n = len(a)
+#     result = set()
+
+#     for i in range (0, n-1):
+#         for j in range (i+1, n):
+#             if a[i] == a[j]:
+#                 result.add(a[i])
+#     return result
+
+# name = ["Tom", "Jerry", "Mike", "Tom"]
+
+# print(find_same_name(name))
+
+# def fact(n):
+    
+#     f = 1
+    
+#     for i in range (1, n+1):
+#         f = f * i
+#     return f
+
+# print(fact(3))
+# print(fact(5))
+
+# def hello():
+#     print("hello")
+#     hello()
+
+# hello()
+
