@@ -3279,3 +3279,181 @@ print("너 혹시 몇 살이니? " + str(4))
 
 # hello()
 
+# def sum(n):
+    
+#     s = 0
+
+#     for i in range (1, n+1):
+
+#         s = s + i
+
+#     return s
+
+# print(sum(10))
+
+# def sum_n(n):
+#     s = 0
+#     for i in range(1, n+1):
+#         s = s + i
+#     return s
+# print(sum_n(10))
+
+# def sum(n):
+#     return n * (n+1) // 2
+# print(sum(10))
+
+# def sum_n(n):
+#     return n * (n+1) // 2
+# print(sum_n(10))
+
+# def find_max(n):
+
+#     a = len(n)
+#     max_v = n[0]
+
+#     for i in range(1, a):
+#         if n[i] >= max_v:
+#             max_v = n[i]
+#     return max_v
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(find_max(v))
+
+# def find_max(a):
+#     n = len(a)
+#     max_v = a[0]
+#     for i in range(1, n):
+#         if a[i] >= max_v:
+#             max_v = a[i]
+#     return max_v
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max(v))
+
+# def find_max_idx(a):
+#     n = len(a)
+#     max_idx = 0
+#     for i in range (1, n):
+#         if a[i] >= a[max_idx]:
+#             max_idx = i
+#     return max_idx
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max_idx(v))
+
+# def find_same_name(a):
+#     n = len(a)
+#     result = set()
+#     for i in range(0, n-1):
+#         for j in range(i+1, n):
+#             if a[i] == a[j]:
+#                 result.add(a[i])
+#     return result
+# name1 = ['Tom', 'Jerry', 'Mike', 'Tom']
+# print(find_same_name(name1))
+
+# def fact(n):
+#     f = 1
+#     for i in range(1, n+1):
+#         f = f * i
+#     return f
+# print(fact(10))
+
+# def fact(n):
+#     if n <= 1:
+#         return 1
+#     return n * fact(n-1)
+# print(fact(5))
+
+# def gcd(a, b):
+
+#     i = min(a, b)
+
+#     while True:
+#         if a % i == 0 and b % i == 0:
+#             return i
+#         i = i - 1
+
+# print(gcd(1, 5)) 
+# print(gcd(3, 6))
+# print(gcd(60, 24))
+# print(gcd(81, 27))
+
+# def gcd(a, b):
+#     if b == 0:
+#         return a
+#     return gcd(b, a% b)
+# print(gcd(1, 5))
+
+# def hanoi(n, from_pos, to_pos, aux_pos):
+
+#     if n == 1:
+#         print(from_pos, "->", to_pos)
+#         return
+    
+#     hanoi(n-1, from_pos, aux_pos, to_pos)
+#     print(from_pos, "->", to_pos)
+
+#     hanoi(n-1, aux_pos, to_pos, from_pos)
+
+# print("n=1")
+# print(hanoi(1, 1, 3, 2))
+
+# def search_list(a, x):
+
+#     n = len(a)
+
+#     for i in range(0, n):
+#         if x == a[i]:
+#             return i
+#     return -1
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(search_list(v, 18))
+
+# def find_min_idx(a):
+
+#     n = len(a)
+#     min_idx = 0
+#     for i in range(1, n):
+#         if a[i] <= a[min_idx]:
+#             min_idx = i
+#     return min_idx
+
+# def sel_sort(a):
+#     result = []
+#     while a:
+#         min_idx = find_min_idx(a)
+#         value = a.pop(min_idx)
+#         result.append(value)
+#     return result
+# d = [2, 4, 5, 1, 3]
+# print(sel_sort(d))
+
+# def find_min_idx(a):
+#     n = len(a)
+#     min_idx = 0
+#     for i in range(1, n):
+#         if a[i] <= a[min_idx]:
+#             min_idx = i
+#     return min_idx
+
+# def sel_sort(a):
+#     result = []
+#     while a:
+#         min_idx = find_min_idx(a)
+#         value = a.pop(min_idx)
+#         result.append(value)
+#     return result
+# d = [2, 4, 1, 3, 5]
+# print(sel_sort(d))
+
+# def sel_sort(a):
+#     n = len(a)
+#     for i in range(0, n-1):
+#         min_idx = i
+#         for j in range(i+1, n):
+#             if a[j] < a[min_idx]:
+#                 min_idx = j
+#                 a[i], a[min_idx] = a[min_idx], a[i]
+# d = [2, 4, 5, 1, 3]
+# print(sel_sort(d))
+
