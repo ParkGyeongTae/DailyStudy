@@ -3457,3 +3457,319 @@ print("너 혹시 몇 살이니? " + str(4))
 # d = [2, 4, 5, 1, 3]
 # print(sel_sort(d))
 
+# def fact(n):
+#     f = 1
+#     for i in range (1, n+1):
+#         f = f * i
+#     return f
+# print(fact(10))
+
+# def fact(n):
+#     if n <= 1:
+#         return 1
+#     return n * fact(n-1)
+# print(fact(10))
+
+# def gcd(a, b):
+#     if b == 0:
+#         return a
+#     return gcd(b, a%b)
+# print(gcd(1, 3))
+# print(gcd(60, 24))
+
+# def hanoi(n, from_pos, to_pos, aux_pos):
+#     if n == 1:
+#         print(from_pos, "->", to_pos)
+#         return
+    
+#     hanoi(n-1, from_pos, aux_pos, to_pos)
+#     print(from_pos, "->", to_pos)
+#     hanoi(n-1, aux_pos, to_pos, from_pos)
+
+# print("n = 1")
+# hanoi(1, 1, 3, 2)
+# print()
+# print("n = 2")
+# hanoi(2, 1, 3, 2)
+
+# def search_list(a, x):
+    
+#     n = len(a)
+
+#     for i in range(0, n):
+#         if x == a[i]:
+#             return i+1
+#     return -1
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(search_list(v, 18))
+
+# def find_min_idx(a):
+    
+#     n = len(a)
+#     min_idx = 0
+#     for i in range (1, n):
+#         if a[i] < a[min_idx]:
+#             min_idx = i
+#     return min_idx
+
+# def sel_sort(a):
+
+#     result = []
+
+#     while a:
+#         min_idx = find_min_idx(a)
+#         value = a.pop(min_idx)
+#         result.append(value)
+#     return result
+
+# d = [2, 4, 5, 1, 3]
+# print(sel_sort(d))
+
+# def sel_sort(a):
+    
+#     n = len(a)
+
+#     for i in range(0, n-1):
+#         min_idx = i
+#         for j in range (i+1, n):
+#             if a[j] < a[min_idx]:
+#                 min_idx = j
+#         a[i], a[min_idx] = a[min_idx], a[i]
+
+# d = [2, 4, 5, 1, 3]
+# sel_sort(d)
+# print(d)
+
+# def ins_sort(a):
+
+#     n = len(a)
+    
+#     for i in range(1, n):
+#         key = a[i]
+#         j = i - 1
+        
+#         while j >= 0 and a[j] > key:
+#             a[ j + 1 ] = a[j]
+#             j -= 1
+#         a[j+1] = key
+
+# d = [2, 4, 5, 1, 3]
+# ins_sort(d)
+# print(d)
+
+
+# def merge_sort(a):
+
+#     n = len(a)
+
+#     if n <= 1:
+#         return a
+#     mid = n // 2
+#     g1 = merge_sort(a[:mid])
+#     g2 = merge_sort(a[mid:])
+#     result = []
+
+#     while g1 and g2:
+#         if g1[0] < g2[0]:
+#             result.append(g1.pop(0))
+#         else:
+#             result.append(g2.pop(0))
+    
+#     while g1:
+#         result.append(g1.pop(0))
+#     while g2:
+#         result.append(g2.pop(0))
+#     return result
+
+# d = [6, 8, 3, 9, 10, 1, 2, 4, 7, 5]
+# print(merge_sort(d))
+
+# def merge_sort(a):
+
+#     n = len(a)
+
+#     if n <= 1:
+#         return
+    
+#     mid = n // 2
+#     g1 = a[:mid]
+#     g2 = a[mid:]
+#     merge_sort(g1)
+#     merge_sort(g2)
+#     i1 = 0
+#     i2 = 0
+#     ia = 0
+
+#     while i1 < len(g1) and i2 < len(g2):
+#         if g1[i1] < g2[i2]:
+#             a[ia] = g1[i1]
+#             i1 += 1
+#             ia += 1
+#         else:
+#             a[ia] = g2[i2]
+#             i2 += 1
+#             ia += 1
+    
+#     while i1 < len(g1):
+#         a[ia] = g1[i1]
+#         i1 += 1
+#         ia += 1
+    
+#     while i2 < len(g2):
+#         a[ia] = g2[i2]
+#         i2 += 1
+#         ia += 1
+
+# d = [6, 8, 3, 9, 10, 1, 2, 4, 7, 5]
+# merge_sort(d)
+# print(d)
+
+# def quick_sort(a):
+
+#     n = len(a)
+
+#     if n <= 1:
+#         return a
+    
+#     pivot = a[-1]
+#     g1 = []
+#     g2 = []
+
+#     for i in range (0, n-1):
+#         if a[i] < pivot:
+#             g1.append(a[i])
+#         else:
+#             g2.append(a[i])
+#     return quick_sort(g1) + [pivot] + quick_sort(g2)
+
+# d = [6, 8, 3, 9, 10, 1, 2, 4, 7, 5]
+# print(quick_sort(d))
+
+# def quick_sort_sub(a, start, end):
+#     if end - start <= 0:
+#         return
+    
+#     pivot = a[end]
+#     i = start
+
+#     for j in range(start, end):
+#         if a[j] <= pivot:
+#             a[i], a[j] = a[j], a[i]
+#             i += 1
+#     a[i], a[end] = a[end], a[i]
+
+#     quick_sort_sub(a, start, i-1)
+#     quick_sort_sub(a, i+1, end)
+
+# def quick_sort(a):
+#     quick_sort_sub(a, 0, len(a)-1)
+
+# d = [6, 8, 3, 9, 10, 1, 2, 4, 7, 5]
+# quick_sort(d)
+# print(d)
+
+# def binary_search(a, x):
+
+#     start = 0
+#     end = len(a) - 1
+
+#     while start <= end:
+#         mid = (start + end) // 2
+#         if x == a[mid]:
+#             return mid
+#         elif x > a[mid]:
+#             start = mid + 1
+#         else:
+#             end = mid - 1
+#     return -1
+
+# d = [1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# print(binary_search(d, 36))
+# print(binary_search(d, 7))
+
+# def palindrome(s):
+
+#     qu = []
+#     st = []
+
+#     for x in s:
+#         if x.isalpha():
+#             qu.append(x.lower())
+#             st.append(x.lower())
+        
+#     while qu:
+#         if qu.pop(0) != st.pop():
+#             return False
+        
+#     return True
+
+# print(palindrome("Wow"))
+# print(palindrome("Madam, I'm adam."))
+# print(palindrome("madam, i am adam."))
+
+# def palindrome(s):
+
+#     st = []
+#     qu = []
+
+#     for x in s:
+#         if x.isalpha():
+#             st.append(x.lower())
+#             qu.append(x.lower())
+    
+#     while st:
+#         if st.pop(0) != qu.pop():
+#             return False
+#     return True
+
+# print(palindrome("Wow"))
+# print(palindrome("Madam, I'm Adam."))
+# print(palindrome("Madam, I am Adam."))
+
+# def find_same_name(a):
+
+#     name_dict = {}
+#     for name in a:
+#         if name in name_dict:
+#             name_dict[name] += 1
+#         else:
+#             name_dict[name] = 1
+    
+#     result = set()
+
+#     for name in name_dict:
+#         if name_dict[name] >= 2:
+#             result.add(name)
+
+#     return result
+
+# name = ["Tom", "Jerry", "Mike", "Tom"]
+# print(find_same_name(name))
+
+# a = {1, 2, 3}
+# b = {1, 2, 3}
+# c = [1, 2, 3]
+# d = {1 : 2}
+
+# print(a, type(a))
+# print(b, type(b))
+# print(c, type(c))
+# print(d, type(d))
+
+# import turtle as t
+
+# def spiral(sp_len):
+#     if sp_len <= 5:
+#         return
+#     t.forward(sp_len)
+#     t.right(90)
+#     spiral(sp_len - 5)
+
+# t.speed(0)
+# spiral(200)
+# t.hideturtle()
+# t.done()
+
