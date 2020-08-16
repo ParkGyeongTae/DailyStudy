@@ -3773,3 +3773,486 @@ print("너 혹시 몇 살이니? " + str(4))
 # t.hideturtle()
 # t.done()
 
+# import math
+
+# def abs_sign(a):
+
+#     if a >= 0:
+#         return a
+#     else:
+#         return -a
+
+# print(abs_sign(5))
+# print(abs_sign(-3))
+
+# import math
+
+# def abs_square(a):
+
+#     b = a * a
+#     return math.sqrt(b)
+
+# print(abs_square(5))
+# print(abs_square(-3))
+
+# def sum_n(n):
+
+#     s = 0
+
+#     for i in range(1, n+1):
+#         s = s + i
+#     return s
+
+# print(sum_n(10))
+
+# def sum_n(n):
+#     s = 0
+#     for i in range (1, n+1):
+#         s = s + i
+#     return s
+# print(sum_n(10))
+# print(sum_n(100))
+
+# def sum_n(n):
+#     return n * (n+1) // 2
+# print(sum_n(10))
+
+# def find_max(n):
+    
+#     a = len(n)
+#     max_v = 0
+
+#     for i in range (1, a):
+#         if n[i] >= n[max_v]:
+#             max_v = i
+#     return n[max_v]
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max(v))
+
+# def find_max(a):
+#     n = len(a)
+#     max_v = 0
+#     for i in range (1, n):
+#         if a[i] >= a[max_v]:
+#             max_v = i
+#     return a[max_v]
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max(v))
+
+# def find_max_idx(a):
+
+#     n = len(a)
+#     max_idx = 0
+
+#     for i in range (1, n):
+#         if a[i] >= a[max_idx]:
+#             max_idx = i
+#     return max_idx
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max_idx(v))
+
+# def find_max_idx(a):
+#     n = len(a)
+#     max_idx = 0
+#     for i in range(1, n):
+#         if a[i] >= a[max_idx]:
+#             max_idx = i
+#     return max_idx
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_max_idx(v))
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(len(v))
+
+# def find_same_name(a):
+    
+#     n = len(a)
+#     result = set()
+
+#     for i in range(0, n-1):
+#         for j in range(i+1, n):
+#             if a[i] == a[j]:
+#                 result.add(a[i])
+#     return result
+# name = ['Tom', 'Jerry', 'Mike', 'Tom']
+# print(find_same_name(name))
+
+# def fact(n):
+#     s = 1
+#     for i in range(1, n+1):
+#         s = s * i
+#     return s
+# print(fact(10))
+
+# def fact(n):
+#     f = 1
+#     for i in range(1, n+1):
+#         f = f * i
+#     return f
+# print(fact(1))
+# print(fact(5))
+# print(fact(10))
+
+# def fact(n):
+#     if n <= 1:
+#         return 1
+#     return n * fact(n-1)
+# print(fact(1))
+# print(fact(5))
+# print(fact(10))
+
+# def gcd(a, b):
+#     i = min(a, b)
+#     while True:
+#         if a % i == 0 and b % i == 0:
+#             return i
+#         i = i - 1
+# print(gcd(1, 5))
+# print(gcd(3, 6))
+# print(gcd(60, 24))
+
+# def gcd(a, b):
+#     if b == 0:
+#         return a
+#     return gcd(b, a%b)
+# print(gcd(1,5))
+# print(gcd(3,6))
+# print(gcd(60,24))
+
+# def hanoi(n, from_pos, to_pos, aux_pos):
+    
+#     if n == 1:
+#         print(from_pos, "->", to_pos)
+#         return
+    
+#     hanoi(n-1, from_pos, aux_pos, to_pos)
+#     print(from_pos, "->", aux_pos)
+
+#     hanoi(n-1, aux_pos, to_pos, from_pos)
+
+# print("n=1")
+# hanoi(1, 1, 3, 2)
+# print("n=2")
+# hanoi(2, 1, 3, 2)
+
+# def sum_sq(n):
+    
+#     s = 0
+
+#     for i in range(1, n+1):
+#         s = s + i * i
+#     return s
+# print(sum_sq(10))
+
+# def find_min(a):
+
+#     n = len(a)
+#     min_v = 0
+
+#     for i in range(1, n):
+#         if a[i] <= a[min_v]:
+#             min_v = i
+#     return a[min_v]
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+# print(find_min(v))
+
+# def print_pairs(a):
+
+#     n = len(a)
+    
+#     for i in range(0, n-1):
+#         for j in range(i+1, n):
+#             print(a[i], "-", a[j])
+
+# name = ['Tom', 'Jerry', "Mike"]
+# print_pairs(name)
+# print()
+# name2 = ['Tom', 'Jerry', 'Mike', 'John']
+# print_pairs(name2)
+
+# def sum_n(n):
+
+#     if n == 0:
+#         return 0
+#     return sum_n(n-1) + n
+
+# print(sum_n(10))
+
+# def find_max(a, n):
+
+#     if n == 1:
+#         return a[0]
+    
+#     max_n_1 = find_max(a, n-1)
+    
+#     if max_n_1 > a[n-1]:
+#         return max_n_1
+#     else:
+#         return a[n-1]
+
+# v = [17, 92, 18, 33, 58, 7, 33, 42]
+
+# print(find_max(v, len(v)))
+
+# def fibo(n):
+
+#     if n <= 1:
+#         return n
+#     return fibo(n-2) + fibo(n-1)
+
+# print(fibo(7))
+
+# a = 80
+# b = 75
+# c = 55
+# print((a+b+c) // 3)
+
+# print(13 % 2)
+
+# Hong = "881120-1068234"
+# a = Hong.split("-")
+# print(a)
+
+# 국어 = 80
+# 영어 = 75
+# 수학 = 55
+# 평균 = (국어 + 영어 + 수학) / 3
+# print("평균 : ", 평균)
+
+# Number = 13
+# if Number % 2 == 0:
+#     print("짝수")
+# else:
+#     print("홀수")
+
+# pin = "881120-1068234"
+# yyyymmdd = pin[:6]
+# num = pin[7:]
+# print(yyyymmdd)
+# print(num)
+
+# pin = '881120-1068234'
+# if pin[7] == "1":
+#     print("남자")
+# else:
+#     print("여자")
+
+# a = "a:b:c:d"
+# b = a.replace(":", "#")
+# print(b)
+
+# a = [1, 3, 5, 4, 2]
+# a.sort()
+# a = a[::-1]
+# print(a)
+
+# a = ['Life', 'is', 'too', 'short']
+# result = a.join()
+# print(result)
+
+# a = (1, 2, 3)
+# a = a + (4)
+# print(a)
+
+#1
+# print("Hello World")
+
+#2
+# print("Mary's cosmetics")
+
+#3
+# print('신씨가 소리질렀다. "도둑이야".')
+
+#4
+# print('"C:\Windows"')
+
+#5
+# print("안녕하세요.\n만나서\t\t반갑습니다.")
+
+#6
+# print("오늘은", "일요일")
+
+#7
+# print("naver;kako;sk;samsung")
+
+#8
+# print("naver/kakao/sk/samsung")
+
+#9
+# print("first",end='');print("second")
+
+#10
+# print(5/3)
+
+#7-2
+# print("naver","kakao","sk","samsung",sep=";")
+
+#8-2
+# print("naver","kakao","sk","samsung",sep="/")
+
+#11
+# 삼성전자 = 50000
+# 보유주식 = 10
+# 총평가금액 = 삼성전자 * 보유주식
+# print(총평가금액, "원")
+
+#12
+# 시가총액 = 298000000000000
+# 현재가 = 50000
+# PER = 15.79
+
+#13
+# s = "hello"
+# t = "python"
+# print(s + "!", t)
+
+#14
+# print(2+2*3)
+
+#15
+# a = "132"
+# print(type(a))
+
+#16
+# num_str = "720"
+# num_str = int(num_str)
+# print(type(num_str))
+
+#17
+# num = 100
+# num = str(num)
+# print(type(num))
+
+#18
+# num = "15.79"
+# num = float(num)
+# print(type(num))
+
+#19
+# year = "2020"
+# year = int(year)
+# print("3년 전 :", year-3)
+# print("2년 전 :", year-2)
+# print("1년 전 :", year-1)
+
+#20
+# price = 48584
+# month = 36
+# print("총 금액 :", price * month)
+
+#21
+# letters = 'python'
+# print(letters[0], letters[2])
+
+#22
+# license_plate = "24가 2210"
+# print(license_plate[-4:])
+
+#23
+# string = "홀짝홀짝홀짝"
+# print(string[0::2])
+
+#24
+# string = "PYTHON"
+# print(string[::-1])
+
+#25
+# phone_number = "010-1111-2222"
+# print(phone_number.replace("-"," "))
+
+#26
+# phone_number = "010-1111-2222"
+# print(phone_number.replace("-", ""))
+
+#27
+# url = "http://sharebook.kr"
+# print(url[-2:])
+
+#28
+# lang = 'python'
+# lang[0] = 'P'
+# print(lang)
+
+#29
+# string = 'abcdfe2a354a32a'
+# print(string.replace("a", "A"))
+
+#30
+# string = 'abcd'
+# string.replace('b', 'B')
+# print(string)
+
+#31
+# a = "3"
+# b = "4"
+# print(a + b)
+
+#32
+# print("Hi" * 3)
+
+#33
+# print("-" * 80)
+
+#34
+# t1 = 'python'
+# t2 = 'java'
+# t3 = t1 + " " + t2 + " "
+# print(t3 * 3)
+
+#35
+# name1 = "김민수"
+# age1 = 10
+# name2 = "이철희"
+# age2 = 13
+# print("이름: %s 나이: %d" % (name1, age1))
+# print("이름: %s 나이: %d" % (name2, age2))
+
+#35_practice1
+# name1 = "김민수"
+# age1 = 10
+# name2 = "이철희"
+# age2 = 13
+# print("이름: %s 나이: %d" % (name1, age1))
+# print("이름: %s 나이: %d" % (name2, age2))
+
+#36
+# name1 = "김민수"
+# age1 = 10
+# name2 = "이철희"
+# age2 = 13
+# print("이름: {} 나이: {}".format(name1, age1))
+# print("이름: {} 나이: {}".format(name2, age2))
+
+#37
+# name1 = "김민수"
+# age1 = 10
+# name2 = "이철희"
+# age2 = 13
+# print(f"이름: {name1} 나이: {age1}")
+# print(f"이름: {name2} 나이: {age2}")
+
+#38
+# 상장주식수 = "5,969,782,550"
+# 상장주식수 = 상장주식수.replace(",", "")
+# 상장주식수 = int(상장주식수)
+# print(상장주식수, type(상장주식수))
+
+#39
+# 분기 = "2020/03(E) (IFRS연결)"
+# print(분기[:7])
+
+#39_Practice(1)
+# 분기 = "2020/03(E) (IFRS연결)"
+# print(분기.split("(E)")[0])
+
+#40
+# data = "    삼성전자    "
+# print(data.strip())
+
+# s = "pPoooyY"
+# # s = s.replace("P", "p")
+# # s = s.replace("Y", "y")
+# s = s.lower()
+# print(s.count("p"))
+
